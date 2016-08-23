@@ -1,6 +1,6 @@
 # Dgp navigation Angular directive
 
-v0.1.0
+v0.1.1
 
 ## What is this repository for?
 
