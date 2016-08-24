@@ -358,6 +358,8 @@ html {
       &:active,
       &:focus {
         color: $nav-top-link-hover-color;
+        text-decoration: none;
+
       }
     }
 
