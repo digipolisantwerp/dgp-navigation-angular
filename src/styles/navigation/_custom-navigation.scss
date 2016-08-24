@@ -6,8 +6,6 @@
  * - side navigation:
  *   - left navigation
  *   - right navigation
- * - bar
- * - back-to top
  */
 
 // Badges variants
@@ -16,36 +14,6 @@
 //   background-color: $background;
 //   color: $color;
 // }
-
-/**
- * Breakpoints to import into JavaScript
- */
-
-body:before {
-  content: "phone-view";
-  display: none; /* Prevent from displaying. */
-}
-
-@include mq($screen-sm) {
-  body:before {
-    content: "tablet-view";
-  }
-}
-
-@include mq($screen-md) {
-  body:before {
-    content: "desktop-view";
-  }
-}
-
-@include mq($screen-lg) {
-  body:before {
-    content: "widescreen-view";
-  }
-}
-
-
-
 
 /**
  * HTML behaviour when side navigation is open
