@@ -652,16 +652,16 @@ html {
   //   color: $nav-aside-badge-color;
   // }
 
-  // .badge,
-  // .badge-danger,
-  // .badge-info,
-  // .badge-primary,
-  // .badge-success,
-  // .badge-warning {
-  //   float: right;
-  //   margin-top: rem(3);
-  //   transition: background $animation-speed linear, color $animation-speed linear;
-  // }
+  .badge,
+  .badge-danger,
+  .badge-info,
+  .badge-primary,
+  .badge-success,
+  .badge-warning {
+    float: right;
+    margin-top: rem(3);
+    transition: background $animation-speed linear, color $animation-speed linear;
+  }
 
 }
 
@@ -706,60 +706,3 @@ html {
     left: 0;
   }
 }
-
-
-
-
-/**
- * Bar -- See separate _bar.scss file
- */
-// .bar {
-//   @include bar($nav-top-height, transparent, $bar-color);
-// }
-
-
-
-
-// /**
-//  * Back to top
-//  */
-// .back-to-top {
-//   background-color: $back-to-top-bgcolor;
-//   border: none;
-//   // bottom: rem(16);
-//   bottom: rem(-44); // 16 - 60
-//   color: $back-to-top-color;
-//   line-height: 0;
-//   opacity: 0;
-//   padding: rem(15 12 17);
-//   position: fixed;
-//   right: rem(16);
-//   // See third issue here why we don't use transform anymore: http://caniuse.com/#feat=transforms2d
-//   // transform: translate(0, rem(60));
-//   transition: background $animation-speed linear, opacity $animation-speed linear, bottom $animation-speed linear;
-//   z-index: 3;
-
-//   &:after {
-//     color: $white;
-//     content: '\f077';
-//     font-family: 'FontAwesome';
-//     font-weight: normal;
-//   }
-
-//   &:hover,
-//   &:active,
-//   &:focus  {
-//     background-color: $back-to-top-hover-bgcolor;
-//     color: $back-to-top-hover-color;
-//   }
-
-//   &.is-visible {
-//     bottom: rem(16);
-//     opacity: 1;
-//     // transform: translate(0, 0);
-//   }
-
-//   span {
-//     @extend .sr-only;
-//   }
-// }
