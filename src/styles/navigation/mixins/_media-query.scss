@@ -1,0 +1,11 @@
+// Media query mixin
+// --------------------------------------------------
+
+// simple MQ mixin
+// source idea http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
+// Adjusted for modern browsers
+@mixin mq($point, $query1: min, $query2: width) {
+  @media (#{$query1}-#{$query2}: #{$point}) {
+    @content;
+  }
+}
