@@ -32,10 +32,13 @@
    */
 
   > ul, > div {
-    @extend .list-inline;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: -7px;
+    padding-left: 0;
 
     // img {
     //   @extend img.non-responsive;
@@ -68,34 +71,8 @@
   &-right {
     float: right;
     justify-content: flex-end;
-    margin-right: rem(-6); // compensation for padding-right of .list-inline
+    margin-right: -7px; // compensation for padding-right of .list-inline
     order: 3;
     text-align: right;
-  }
-}
-
-
-
-/**
- * IE9 fall back
- * --------------------------------
- */
-
-.bar {
-  > ul {
-    > li {
-      line-height: rem(2.5 * $font-size-base) \9;
-    }
-  }
-
-  &-left {
-    float: left;
-  }
-
-  &-center {
-  }
-
-  &-right {
-    float: right;
   }
 }
