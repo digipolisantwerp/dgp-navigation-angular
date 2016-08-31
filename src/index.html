@@ -6,6 +6,8 @@
   <meta name="description" content="">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/dgp-bootstrap-sass/dist/css/main.css" />
   <!-- endbower -->
@@ -13,22 +15,52 @@
 </head>
 <body>
 
-<nav data-dgp-top-nav="" class="nav-top">
-  <ul class="nav-top-left">
-    <li class="nav-top-logo"><a href="#" title=""><span>Your Project</span></a></li>
-    <li class="nav-top-toggle" data-dgp-sidenav-collapse="asideNavLeft"><a href="#" title="Open menu"><i class="fa fa-bars"><span class="sr-only">Open menu</span></i></a></li>
-    <li class="nav-top-app"><h1><a href="#">My App</a></h1></li>
-    <li><a href="#">Menu L1</a></li>
-    <li><a href="#">Menu L2</a></li>
-  </ul>
-  <ul class="nav-top-right">
-    <li class="active"> <a href="#">Menu R1</a> </li>
-    <li> <a href="#">Menu R2</a> </li>
-  </ul>
-  <ul class="nav-top-center">
-    <li><input type="search" class="input-search" placeholder="Zoeken"></li>
-  </ul>
+
+<nav data-dgp-top-nav="" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="http://tink.digipolis.be/images/main/digipolis-logo.fa816991.svg">
+      </a>
+    </div>
+
+      <ul class="nav navbar-nav navbar-left">
+        <li class="nav-top-toggle" data-dgp-sidenav-collapse="asideNavLeft"><a href="#" title="Open sidemenu"><i class="fa fa-bars"><span class="sr-only">Open sidemenu</span></i></a></li>
+        <li class="nav-top-app"><h1><a href="#">My App</a></h1></li>
+      </ul>
+
+
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="#">Menu L1</a></li>
+        <li><a href="#">Menu L2</a></li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Menu R1</a></li>
+        <li><a href="#">Menu R2</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
+  </div>
 </nav>
+
+
+
+
 
 <div data-dgp-nav-aside="" data-auto-select="true" data-toggle-id="asideNavLeft" class="nav-aside nav-left">
   <aside>
