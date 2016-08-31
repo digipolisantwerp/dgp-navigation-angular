@@ -260,16 +260,19 @@ html {
  * --------------------------------------------------
  */
 
-.navbar {
- font-size: 17px;
+.navbar-inverse {
+ font-size: 17px; // default value should be changed according to media query
  -webkit-font-smoothing: antialiased;
+ li > a:hover {
+  text-decoration: underline;
+ }
 }
 
 .navbar-brand {
   padding: 0;
   img {
-    height: 50px;
-    width: 50px;
+    height: 50px; // default value should be changed according to media query
+    width: 50px; // default value should be changed according to media query
   }
 }
 
@@ -277,49 +280,58 @@ html {
   border-width: 0;
 }
 
-nav {
-  li {
-    &.nav-top-toggle {
-      @include mq($screen-sm) {
-        display: none;
-      }
-    }
-    &.nav-top-app {
-      @include mq($screen-xs-max, "max") {
-        display: none;
-      }
-    }
+.nav-top {
+  margin: 0;
+  list-style: none;
+
+  a {
+    color: $nav-top-link-color;
   }
 }
 
-  .nav-top-app {
+.nav-top-toggle {
+  display: inline-block;
+  padding: 13px 0 0 26px; // should be relative to media query
+  position: relative;
 
-    a {
-      color: $nav-top-link-color;
-      margin: 0 $nav-top-padding 0 0;
-      padding: 15px;
+  @include mq($screen-sm) {
+    display: none;
+  }
+}
+
+.nav-top-app {
+  display: inline-block;
+  position: relative;
+
+  @include mq($screen-xs-max, "max") {
+    display: none;
+  }
+
+  a {
+    margin: 0 $nav-top-padding 0 0;
+    padding: 20px;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $nav-top-link-hover-color;
       text-decoration: none;
 
-      &:hover,
-      &:active,
-      &:focus {
-        color: $nav-top-link-hover-color;
-        text-decoration: none;
-
-      }
-    }
-
-    h1 {
-      font-size: 17px;
-      font-weight: 700;
-      line-height: $nav-top-height; // depends on media query !!
-      margin: 0;
-
-      span {
-        font-weight: 400;
-      }
     }
   }
+
+  h1 {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: $nav-top-height; // depends on media query !!
+    margin: 0;
+
+    span {
+      font-weight: 400;
+    }
+  }
+}
 
 
 /**
