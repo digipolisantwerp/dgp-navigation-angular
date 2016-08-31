@@ -280,58 +280,65 @@ html {
   border-width: 0;
 }
 
-.nav-top {
-  margin: 0;
-  list-style: none;
+.navbar-header {
 
-  a {
-    color: $nav-top-link-color;
-  }
-}
 
-.nav-top-toggle {
-  display: inline-block;
-  padding: 13px 0 0 26px; // should be relative to media query
-  position: relative;
+  .navbar-nav {
+    a {
+      color: $nav-top-link-color;
+    }
 
-  @include mq($screen-sm) {
-    display: none;
-  }
-}
+    .navbar-toggle-sidenav {
+      display: inline-block;
+      position: relative;
 
-.nav-top-app {
-  display: inline-block;
-  position: relative;
+      a {
+        color: $nav-top-link-color;
+      }
 
-  @include mq($screen-xs-max, "max") {
-    display: none;
-  }
+      @include mq($screen-sm) {
+        display: none;
+      }
+    }
 
-  a {
-    margin: 0 $nav-top-padding 0 0;
-    padding: 20px;
-    text-decoration: none;
+    .navbar-app {
+      display: inline-block;
+      position: relative;
 
-    &:hover,
-    &:active,
-    &:focus {
-      color: $nav-top-link-hover-color;
-      text-decoration: none;
+      @include mq($screen-xs-max, "max") {
+        display: none;
+      }
 
+      a {
+        margin: 0 $nav-top-padding 0 0;
+        padding: 20px;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $nav-top-link-hover-color;
+          text-decoration: none;
+
+        }
+      }
+
+      h1 {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: $nav-top-height; // depends on media query !!
+        margin: 0;
+
+        span {
+          font-weight: 400;
+        }
+      }
     }
   }
 
-  h1 {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: $nav-top-height; // depends on media query !!
-    margin: 0;
-
-    span {
-      font-weight: 400;
-    }
-  }
 }
+
+
 
 
 /**
