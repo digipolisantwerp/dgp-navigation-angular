@@ -78,23 +78,23 @@ $padding-base-horizontal:   12px !default;
 
 
 
-// /**
-//  * Bar component
-//  *
-//  * Settings for a standard bar
-//  */
-// $bar-height:                            50px !default;
-// $bar-padding:                           $padding-base-horizontal !default;
+/**
+ * Bar component
+ *
+ * Settings for a standard bar
+ */
+$bar-height:                            50px !default;
+$bar-padding:                           $padding-base-horizontal !default; //!!
 
 
 
-// /**
-//  * Logo
-//  */
-// // $logo:          "digipolis-logo.svg" !default;
-// $logo-bg-color: transparent !default;
-// $logo-width:    $bar-height !default;
-// $logo-height:   $bar-height !default;
+/**
+ * Logo
+ */
+// $logo:          "digipolis-logo.svg" !default;
+$logo-bg-color: transparent !default;
+$logo-width:    60px !default;
+$logo-height:   60px !default;
 
 
 
@@ -104,7 +104,7 @@ $padding-base-horizontal:   12px !default;
  * Settings for the top navigation and the off-canvas navigation
  */
 
-$nav-top-height:                         50px !default;
+$nav-top-height:                         60px !default;
 $nav-top-bg-color:                       $gray-darker !default;
 $nav-top-color:                          $white !default;
 $nav-top-link-color:                     $white !default;
@@ -117,7 +117,7 @@ $nav-aside-horizontal-padding:                  18px !default;
 $nav-aside-vertical-padding:                    12px !default;
 $nav-aside-item-vertical-padding:               7px !default;
 $nav-aside-width:                               267px !default;
-//$nav-aside-extra-body-padding:                  0 !default;
+$nav-aside-extra-body-padding:                  0 !default;
 
 $nav-aside-bg-color:                            $white !default;
 $nav-aside-section-border-color:                $gray-lighter !default;
