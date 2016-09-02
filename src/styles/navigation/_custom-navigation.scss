@@ -693,21 +693,15 @@ html {
  * Customisation of Bootstrap navbar styling
  */
 
-.nav-aside,
-.navbar {
-  @include mq($screen-sm) {
-    $font-size-base: 14px;
-    font-size: $font-size-base;
-  }
-  @include mq($screen-md) {
-    $font-size-base: 15px;
-    font-size: $font-size-base;
-  }
-  @include mq($screen-lg) {
-    $font-size-base: 17px;
-    font-size: $font-size-base;
-  }
+.navbar-brand {
+  padding: 0;
 
+  img {
+    height: inherit;
+  }
+}
+
+.navbar {
   &-fixed-top {
     border-width: 0;
   }
@@ -728,7 +722,7 @@ html {
     }
 
     h1 {
-      font-size: inherit;
+      font-size: inherit;//$font-size-base;
       font-weight: 700;
       line-height: 20px;
       margin: 0;
@@ -736,15 +730,6 @@ html {
     }
   }
 }
-
-.navbar-brand {
-  padding: 0;
-
-  img {
-    height: inherit;
-  }
-}
-
 .navbar-inverse {
   .navbar-header {
     .navbar-toggle-sidenav {
