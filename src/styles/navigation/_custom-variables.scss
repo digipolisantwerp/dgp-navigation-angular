@@ -39,28 +39,6 @@ $gray-light:            #bbb !default;
 $gray-lighter:          #eaeaea !default;
 $gray-lightest:         #f7f7f7 !default;
 
-$brand:                 #347ea6 !default; // Digipolis dark blue - was #698ab2
-
-// // Settings for some of the most global styles.
-$body-bg:               $white !default;
-$body-bg-alt:           $gray-lightest !default;
-$text-color:            $gray-dark !default;
-
-// Typography
-$font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-
-$font-family-base:        $font-family-sans-serif !default;
-$font-size-base:          14px !default;
-
-
-// Scaling for larger viewports
-$font-size-factor-sm:     15/14 !default;
-$font-size-factor-md:     16/14 !default;
-$font-size-factor-lg:     17/14 !default;
-
-$line-height-base:        1.428571429 !default; // 20/14 - Unit-less `line-height` for use in components like buttons.
-
-
 
 /**
  * Animation
@@ -75,16 +53,6 @@ $animation-speed:                .1s !default;
  */
 
 $padding-base-horizontal:   12px !default;
-
-
-
-/**
- * Bar component
- *
- * Settings for a standard bar
- */
-$bar-height:                            50px !default;
-$bar-padding:                           $padding-base-horizontal !default; //!!
 
 
 
@@ -104,14 +72,9 @@ $logo-height:   60px !default;
  * Settings for the top navigation and the off-canvas navigation
  */
 
-$nav-top-height:                         60px !default;
-$nav-top-bg-color:                       $gray-darker !default;
-$nav-top-color:                          $white !default;
+$nav-top-height:                         60px !default; // needs to be the same as navbar
 $nav-top-link-color:                     $white !default;
 $nav-top-link-hover-color:               $gray-lighter !default;
-// $nav-top-link-bg-hover-color:            lighten($nav-top-bg-color, 10) !default;
-$nav-top-padding:                        14px !default;
-$nav-top-logo-padding:                   $nav-top-padding !default;
 
 $nav-aside-horizontal-padding:                  18px !default;
 $nav-aside-vertical-padding:                    12px !default;
@@ -119,11 +82,10 @@ $nav-aside-item-vertical-padding:               7px !default;
 $nav-aside-width:                               267px !default;
 $nav-aside-extra-body-padding:                  0 !default;
 
-$nav-aside-bg-color:                            $white !default;
 $nav-aside-section-border-color:                $gray-lighter !default;
 $nav-aside-title-color:                         $gray-light !default;
 $nav-aside-link-color:                          lighten($gray-dark, 12%) !default;
-$nav-aside-link-hover-color:                    $brand !default;
+$nav-aside-link-hover-color:                    #219dc8 !default;
 $nav-aside-link-hover-background-color:         rgba($black, .05) !default;
 $nav-aside-link-active-color:                   $nav-aside-link-hover-color !default;
-$nav-aside-item-open-color:                     $body-bg-alt !default;
+$nav-aside-item-open-color:                     $gray-lightest !default;
