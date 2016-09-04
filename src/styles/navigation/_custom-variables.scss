@@ -72,9 +72,9 @@ $logo-height:   60px !default;
  * Settings for the top navigation and the off-canvas navigation
  */
 
-$nav-top-height:                         60px !default; // needs to be the same as navbar
-$nav-top-link-color:                     $white !default;
-$nav-top-link-hover-color:               $gray-lighter !default;
+$navbar-height:                         60px !default; // needs to be the same as navbar
+$navbar-app-link-color:                     $white !default;
+$navbar-app-link-hover-color:               $gray-lighter !default;
 
 $nav-aside-horizontal-padding:                  18px !default;
 $nav-aside-vertical-padding:                    12px !default;

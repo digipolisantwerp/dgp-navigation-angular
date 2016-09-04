@@ -47,14 +47,22 @@
 
 @media (max-width: 767px) {
   html.nav-left-open .main {
+    -webkit-transform: translate(267px, 0);
+    -ms-transform: translate(267px, 0);
     transform: translate(267px, 0); }
   html.nav-left-open .nav-left {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
     transform: translate(0, 0); } }
 
 @media (max-width: 767px) {
   html.nav-right-open .main {
+    -webkit-transform: translate(-267px, 0);
+    -ms-transform: translate(-267px, 0);
     transform: translate(-267px, 0); }
   html.nav-right-open .nav-right {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
     transform: translate(0, 0); } }
 
 /**
@@ -79,25 +87,30 @@ html {
       html.has-nav-left.nav-left-can-always-close .main {
         padding-left: 0; }
       html.has-nav-left.nav-left-can-always-close .nav-left {
+        -webkit-transform: translate(-267px, 0);
+        -ms-transform: translate(-267px, 0);
         transform: translate(-267px, 0); } }
     @media (min-width: 768px) {
       html.has-nav-left.nav-left-can-always-close.nav-left-open .main {
         padding-left: 267px; }
       html.has-nav-left.nav-left-can-always-close.nav-left-open .nav-left {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
         transform: translate(0, 0); } }
     @media (min-width: 768px) {
       html.has-nav-left.nav-left-can-always-close-and-starts-open .main {
         padding-left: 267px; }
       html.has-nav-left.nav-left-can-always-close-and-starts-open .nav-left {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
         transform: translate(0, 0); } }
     @media (min-width: 768px) {
       html.has-nav-left.nav-left-can-always-close-and-starts-open.nav-left-open .main {
         padding-left: 0; }
       html.has-nav-left.nav-left-can-always-close-and-starts-open.nav-left-open .nav-left {
+        -webkit-transform: translate(-267px, 0);
+        -ms-transform: translate(-267px, 0);
         transform: translate(-267px, 0); } }
-    @media (min-width: 768px) {
-      html.has-nav-left.nav-left-can-always-close-and-starts-open .nav-top-toggle {
-        display: inline-block; } }
   html.has-nav-right {
     /**
      * If the right nav can always be closed we need some more styling
@@ -112,33 +125,34 @@ html {
       html.has-nav-right.nav-right-can-always-close .main {
         padding-right: 0; }
       html.has-nav-right.nav-right-can-always-close .nav-right {
+        -webkit-transform: translate(267px, 0);
+        -ms-transform: translate(267px, 0);
         transform: translate(267px, 0); } }
     @media (min-width: 768px) {
       html.has-nav-right.nav-right-can-always-close.nav-right-open .main {
         padding-right: 267px; }
       html.has-nav-right.nav-right-can-always-close.nav-right-open .nav-right {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
         transform: translate(0, 0); } }
-    @media (min-width: 768px) {
-      html.has-nav-right.nav-right-can-always-close .nav-top-toggle {
-        display: inline-block; } }
     @media (min-width: 768px) {
       html.has-nav-right.nav-right-can-always-close-and-starts-open .main {
         padding-right: 267px; }
       html.has-nav-right.nav-right-can-always-close-and-starts-open .nav-right {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
         transform: translate(0, 0); } }
     @media (min-width: 768px) {
       html.has-nav-right.nav-right-can-always-close-and-starts-open.nav-right-open .main {
         padding-right: 0; }
       html.has-nav-right.nav-right-can-always-close-and-starts-open.nav-right-open .nav-right {
+        -webkit-transform: translate 267px, 0;
+        -ms-transform: translate 267px, 0;
         transform: translate 267px, 0; } }
-    @media (min-width: 768px) {
-      html.has-nav-right.nav-right-can-always-close-and-starts-open .nav-top-toggle {
-        display: inline-block; } }
-  html.has-relative-nav-top .nav-top {
-    position: relative; }
 
 .main {
   position: absolute;
+  transition: opacity 0.2s linear, padding 0.1s linear, -webkit-transform 0.1s linear;
   transition: opacity 0.2s linear, padding 0.1s linear, transform 0.1s linear;
   width: 100%;
   /**
@@ -165,6 +179,7 @@ html {
   bottom: 0;
   position: fixed;
   top: 60px;
+  transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
   width: 267px;
   z-index: 4;
@@ -269,12 +284,15 @@ html {
           right: 18px;
           text-decoration: inherit;
           top: 12px;
+          transition: color 0.1s linear, -webkit-transform 0.1s linear;
           transition: color 0.1s linear, transform 0.1s linear;
           z-index: 2; }
         .nav-aside-section > ul > li.can-open.open {
           border-bottom: 1px solid;
           background: #f7f7f7; }
           .nav-aside-section > ul > li.can-open.open:before {
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
           .nav-aside-section > ul > li.can-open.open > a {
             font-weight: 700; }
@@ -302,9 +320,13 @@ html {
  */
 .nav-left {
   left: 0;
+  -webkit-transform: translate(-267px, 0);
+  -ms-transform: translate(-267px, 0);
   transform: translate(-267px, 0); }
   @media (min-width: 768px) {
     .nav-left {
+      -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
       transform: translate(0, 0); } }
   .nav-left:before {
     right: 0; }
@@ -315,9 +337,13 @@ html {
  */
 .nav-right {
   right: 0;
+  -webkit-transform: translate(267px, 0);
+  -ms-transform: translate(267px, 0);
   transform: translate(267px, 0); }
   @media (min-width: 768px) {
     .nav-right {
+      -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
       transform: translate(0, 0); } }
   .nav-right:before {
     left: 0; }
@@ -334,8 +360,10 @@ html {
   border-width: 0; }
 
 .navbar-app a {
+  color: #fff;
   text-decoration: none; }
   .navbar-app a:hover, .navbar-app a:active, .navbar-app a:focus {
+    color: #eaeaea;
     text-decoration: none; }
 
 .navbar-app h1 {

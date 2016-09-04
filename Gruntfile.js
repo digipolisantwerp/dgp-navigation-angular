@@ -269,6 +269,19 @@ module.exports = function (grunt) {
             ]
           }
         ]
+      },
+      images: {
+        files: [
+          {
+            expand: true,
+            dot: true,
+            cwd: '<%= yeoman.app %>/images/',
+            dest: '<%= yeoman.dist %>/images/',
+            src: [
+              '{,*/}*'
+            ]
+          }
+        ]
       }
     },
     concat: {
@@ -414,6 +427,7 @@ module.exports = function (grunt) {
     'usemin',
     'copy:styles',
     'cssmin',
+    'copy:images',
     'clean:server'
   ]);
 

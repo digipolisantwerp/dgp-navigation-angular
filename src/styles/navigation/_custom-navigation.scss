@@ -142,14 +142,14 @@ html {
         }
       }
 
-      // Make sure the toggle is always visible
-      .nav-top {
-        &-toggle {
-          @include mq($screen-sm) {
-            display: inline-block;
-          }
-        }
-      }
+      // // Make sure the toggle is always visible
+      // .nav-top {
+      //   &-toggle {
+      //     @include mq($screen-sm) {
+      //       display: inline-block;
+      //     }
+      //   }
+      // }
     }
   }
 
@@ -187,14 +187,14 @@ html {
         }
       }
 
-      // Make sure the toggle is always visible
-      .nav-top {
-        &-toggle {
-          @include mq($screen-sm) {
-            display: inline-block;
-          }
-        }
-      }
+      // // Make sure the toggle is always visible
+      // .nav-top {
+      //   &-toggle {
+      //     @include mq($screen-sm) {
+      //       display: inline-block;
+      //     }
+      //   }
+      // }
     }
 
     /**
@@ -224,25 +224,25 @@ html {
         }
       }
 
-      // Make sure the toggle is always visible
-      .nav-top {
-        &-toggle {
-          @include mq($screen-sm) {
-            display: inline-block;
-          }
-        }
-      }
+      // // Make sure the toggle is always visible
+      // .nav-top {
+      //   &-toggle {
+      //     @include mq($screen-sm) {
+      //       display: inline-block;
+      //     }
+      //   }
+      // }
     }
   }
 
   /**
    * If the nav-top for some reason needs to scroll with the page
    */
-  &.has-relative-nav-top {
-    .nav-top {
-      position: relative;
-    }
-  }
+  // &.has-relative-nav-top {
+  //   .nav-top {
+  //     position: relative;
+  //   }
+  // }
 }
 
 
@@ -276,7 +276,7 @@ html {
  * Top navigation
  * --------------------------------------------------
  */
-.nav-top {
+// .nav-top {
   // @extend .bar;
   // background-color: $nav-top-bg-color;
   // color: $nav-top-color;
@@ -390,7 +390,7 @@ html {
   //     }
   //   }
   // }
-}
+// }
 
 
 
@@ -404,7 +404,7 @@ html {
   // background: $nav-aside-bg-color; !!
   bottom: 0;
   position: fixed;
-  top: $nav-top-height;
+  top: $navbar-height;
   transition: transform $animation-speed linear;
   width: $nav-aside-width;
   z-index: 4;
@@ -718,13 +718,13 @@ html {
 // recovering styling
   &-app {
     a {
-      color: $nav-top-link-color;
+      color: $navbar-app-link-color;
       text-decoration: none;
 
       &:hover,
       &:active,
       &:focus {
-        color: $nav-top-link-hover-color;
+        color: $navbar-app-link-hover-color;
         text-decoration: none;
 
       }
@@ -744,9 +744,6 @@ html {
     .navbar-toggle-sidenav {
       @include mq($screen-sm) {
         display: none;
-      }
-      a {
-        // color: $nav-top-link-color; !!
       }
     }
     .navbar-app {
