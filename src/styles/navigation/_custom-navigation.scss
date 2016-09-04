@@ -401,7 +401,7 @@ html {
  */
 
 .nav-aside {
-  // background: $nav-aside-bg-color; !!
+  // background: $nav-aside-bg-color;
   bottom: 0;
   position: fixed;
   top: $navbar-height;
@@ -576,7 +576,7 @@ html {
           }
 
           &.open {
-            border-bottom: 1px solid;// $nav-aside-bg-color; !!
+            border-bottom: 1px solid;// $nav-aside-bg-color;
             background: $nav-aside-item-open-color;
 
             &:before {
