@@ -9,7 +9,7 @@
 		dgpApi = {};
 	}
 
-	dgpApi.VERSION = '0.3.0';
+	dgpApi.VERSION = '0.4.0';
 
 	dgpApi.util = {
 		getCurrentURL: function () {

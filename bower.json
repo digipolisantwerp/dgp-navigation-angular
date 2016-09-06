@@ -1,8 +1,9 @@
 {
   "name": "dgp-navigation-angular",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": [
-    "dist/dgp-navigation-angular.js"
+    "dist/dgp-navigation-angular.js",
+    "dist/navigation.css"
   ],
   "ignore": [
     ".*",
