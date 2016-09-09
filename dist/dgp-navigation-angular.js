@@ -75,7 +75,7 @@
 		dgpApi = {};
 	}
 
-	dgpApi.VERSION = '0.2.0';
+	dgpApi.VERSION = '0.5.0';
 
 	dgpApi.util = {
 		getCurrentURL: function () {
