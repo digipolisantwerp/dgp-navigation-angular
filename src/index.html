@@ -16,7 +16,7 @@
 <body>
 
 
-<nav data-dgp-top-nav="" class="navbar navbar-inverse navbar-fixed-top">
+<nav data-dgp-top-nav="" class="nav-top navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
 
@@ -828,8 +828,75 @@
     </section>
 
 
-   <section>
-      <h2>Breadcrumbs</h2>
+    <div class="page-header">
+      <h1>Navbar</h1>
+    </div>
+    <section>
+
+      <div class="row">
+        <div class="col-xs-12">
+
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                  <li><a href="#">Link</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">One more separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">Link</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+
+        </div>
+      </div>
+    </section>
+
+
+    <div class="page-header">
+      <h1>Breadcrumbs</h1>
+    </div>
+    <section>
       <div class="row">
         <div class="col-xs-12">
           <ol class="breadcrumb">
@@ -842,8 +909,10 @@
     </section>
 
 
+    <div class="page-header">
+      <h1>Pagination</h1>
+    </div>
     <section>
-      <h2>Pagination</h2>
       <div class="row">
         <div class="col-xs-12 col-md-4">
           <nav aria-label="Page navigation">
@@ -959,7 +1028,7 @@
     </section>
 
     <div class="page-header">
-      <h1>Badges</h1>
+      <h1>Badges <small>don't have contextual colors</small></h1>
     </div>
     <section>
       <div class="row">
@@ -1031,6 +1100,48 @@
         </div>
       </div>
     </section>
+
+
+    <div class="page-header">
+      <h1>Progress bars</h1>
+    </div>
+
+    <section>
+      <h2>Default progress bar with label</h2>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+              40%
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Stacked contextual progress bar with label</h2>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" style="width: 35%">
+              <span class="sr-only">35% Complete (success)</span>
+            </div>
+            <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+              <span class="sr-only">20% Complete (warning)</span>
+            </div>
+            <div class="progress-bar progress-bar-danger" style="width: 10%">
+              <span class="sr-only">10% Complete (danger)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
 
   </div>
 </div>

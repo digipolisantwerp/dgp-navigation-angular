@@ -161,7 +161,7 @@
 			mobileAutoClose:true,
 			menuStr:'aside[data-dgp-nav-aside]',
 			activeCss:'active',
-			topNav:'nav.navbar',
+			topNav:'nav.nav-top',
 			subActive:'has-active-item',
 			openCss:'open',
 			accordion:true,
