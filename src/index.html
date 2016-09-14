@@ -1057,7 +1057,7 @@
 
 
     <div class="page-header">
-      <h1>Alerts</h1>
+      <h1>Alerts <small>Bootstrap doesn't have callouts by default</small></h1>
     </div>
     <section>
       <div class="row">
@@ -1137,10 +1137,273 @@
         </div>
       </div>
     </section>
+    </section>
 
 
+    <div class="page-header">
+      <h1>List group</h1>
+    </div>
+
+    <section>
+      <h2>Default list group <small>With badges</small></h2>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <ul class="list-group">
+            <li class="list-group-item active">
+              <span class="badge">14</span>
+              Active item
+            </li>
+            <li class="list-group-item">Default item</li>
+            <li class="list-group-item list-group-item-info">
+              <span class="badge">6</span>
+              Contextual item
+            </li>
+            <li class="list-group-item disabled">Disabled item</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>List group: Linked items <small>But can also be buttons</small></h2>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">
+              Active item
+            </a>
+            <a href="#" class="list-group-item">Default item</a>
+            <a href="#" class="list-group-item list-group-item-info">Contextual item</a>
+            <a href="#" class="list-group-item disabled">Disabled item</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>List group: Custom content</h2>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">
+              <h4 class="list-group-item-heading">List group active item heading</h4>
+              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            </a>
+            <a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">List group item heading</h4>
+              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            </a>
+            <a href="#" class="list-group-item disabled">
+              <h4 class="list-group-item-heading">List group disabled item heading</h4>
+              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
+    <div class="page-header">
+      <h1>Panels</h1>
+    </div>
+
+    <section>
+      <h2>Basic panel</h2>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Basic panel example
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Panel with heading</h2>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">Panel heading without title</div>
+            <div class="panel-body">
+              Panel content
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel heading with title</h3>
+            </div>
+            <div class="panel-body">
+              Panel content
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Panel with footer</h2>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Panel content
+            </div>
+            <div class="panel-footer">Panel footer</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contextual panel</h2>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Primary panel with title</h3>
+            </div>
+            <div class="panel-body">
+              Panel content
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h3 class="panel-title">Warning panel with title</h3>
+            </div>
+            <div class="panel-body">
+              Panel content
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Panel with table</h2>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel with table and body content</h3>
+            </div>
+            <div class="panel-body">
+              Some extra panel content that you want share with others.
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel with table but without panel body content</h3>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Panel with list group</h2>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Primary panel with title</h3>
+            </div>
+            <div class="panel-body">
+              Panel content
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item">And so on .</li>
+              <li class="list-group-item">And so on ..</li>
+              <li class="list-group-item">And so on ...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h1 class="page-header">Wells</h1>
+      <h2>Default well</h2>
+      <p>Use the well as a simple effect on an element to give it an inset effect.</p>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="well"> Look, I'm in a default well! </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="well well-lg"> Look, I'm in a large well! </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="well well-sm"> Look, I'm in a small well! </div>
+        </div>
+      </div>
+    </section>
 
 
   </div>
