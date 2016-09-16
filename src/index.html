@@ -1405,6 +1405,359 @@
       </div>
     </section>
 
+    <section>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <h1 class="page-header">Accordions</h1>
+            <div ng-controller="UibAccordionController">
+              <script type="text/ng-template" id="group-template.html">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+                        <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+                          {{heading}}
+                        </span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="panel-collapse collapse" uib-collapse="!isOpen">
+                    <div class="panel-body" style="text-align: right" ng-transclude></div>
+                  </div>
+                </div>
+              </script>
+
+              <p>
+                <button type="button" class="btn btn-default btn-sm" ng-click="status.open = !status.open">Toggle last panel</button>
+                <button type="button" class="btn btn-default btn-sm" ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel</button>
+              </p>
+
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" ng-model="oneAtATime">
+                  Open only one at a time
+                </label>
+              </div>
+              <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default" heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                  This content is straight in the template.
+                </div>
+                <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in groups">
+                  {{group.content}}
+                </div>
+                <div uib-accordion-group class="panel-default" is-open="status.isCustomHeaderOpen" template-url="group-template.html">
+                  <uib-accordion-heading>
+                    Custom template with custom header template <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isCustomHeaderOpen, 'glyphicon-chevron-right': !status.isCustomHeaderOpen}"></i>
+                  </uib-accordion-heading>
+                  World
+                </div>
+                <div uib-accordion-group class="panel-danger" heading="Delete account">
+                  <p>Please, to delete your account, click the button below</p>
+                  <button class="btn btn-danger">Delete</button>
+                </div>
+                <div uib-accordion-group class="panel-default" is-open="status.open">
+                  <uib-accordion-heading>
+                    I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                  </uib-accordion-heading>
+                  This is just some content to illustrate fancy headings.
+                </div>
+              </uib-accordion>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <h1 class="page-header">Datepicker</h1>
+            <div ng-controller="UibDatepickerController">
+              <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+
+              <h4>Inline</h4>
+              <div style="display:inline-block; min-height:290px;">
+                <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
+              </div>
+
+              <hr />
+              <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
+              <button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>
+              <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
+              <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <h1 class="page-header">Datepicker Popup</h1>
+            <div ng-controller="DatepickerPopupDemoCtrl">
+              <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+
+              <h4>Popup</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="input-group">
+                    <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                  </p>
+                </div>
+
+                <div class="col-md-6">
+                  <p class="input-group">
+                    <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Format: <span class="muted-text">(manual alternate <em>{{altInputFormats[0]}}</em>)</span></label> <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
+                </div>
+              </div>
+
+              <hr />
+              <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
+              <button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>
+              <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
+              <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <h1 class="page-header">Modal</h1>
+
+          <div ng-controller="ModalDemoCtrl as $ctrl">
+            <script type="text/ng-template" id="myModalContent.html">
+              <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+              </div>
+              <div class="modal-body" id="modal-body">
+                <ul>
+                  <li ng-repeat="item in $ctrl.items">
+                    <a href="#" ng-click="$event.preventDefault(); $ctrl.selected.item = item">{{ item }}</a>
+                  </li>
+                </ul>
+                Selected: <b>{{ $ctrl.selected.item }}</b>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+                <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+              </div>
+            </script>
+
+            <button type="button" class="btn btn-default" ng-click="$ctrl.open()">Open me!</button>
+            <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg')">Large modal</button>
+            <button type="button" class="btn btn-default" ng-click="$ctrl.open('sm')">Small modal</button>
+            <button type="button" class="btn btn-default" ng-click="$ctrl.toggleAnimation()">Toggle Animation ({{ $ctrl.animationsEnabled }})</button>
+    <!--         <button type="button" class="btn btn-default" ng-click="$ctrl.openComponentModal()">Open a component modal!</button> -->
+            <div ng-show="$ctrl.selected">Selection from a modal: {{ $ctrl.selected }}</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <h1 class="page-header">Popover</h1>
+
+          <div ng-controller="PopoverDemoCtrl">
+            <h4>Dynamic</h4>
+            <div class="form-group">
+              <label>Popup Text:</label>
+              <input type="text" ng-model="dynamicPopover.content" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Popup Title:</label>
+              <input type="text" ng-model="dynamicPopover.title" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Popup Template:</label>
+              <input type="text" ng-model="dynamicPopover.templateUrl" class="form-control">
+            </div>
+            <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Dynamic Popover</button>
+
+            <button uib-popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Popover With Template</button>
+
+            <script type="text/ng-template" id="myPopoverTemplate.html">
+                <div>{{dynamicPopover.content}}</div>
+                <div class="form-group">
+                  <label>Popup Title:</label>
+                  <input type="text" ng-model="dynamicPopover.title" class="form-control">
+                </div>
+            </script>
+            <hr />
+            <h4>Positional</h4>
+            <div class="form-group">
+              <label>Popover placement</label>
+              <select class="form-control" ng-model="placement.selected" ng-options="o as o for o in placement.options"></select>
+            </div>
+            <button popover-placement="{{placement.selected}}" uib-popover="On the {{placement.selected}}" type="button" class="btn btn-default">Popover {{placement.selected}}</button>
+
+            <hr />
+            <h4>Triggers</h4>
+            <p>
+              <button uib-popover="I appeared on mouse enter!" popover-trigger="'mouseenter'" type="button" class="btn btn-default">Mouseenter</button>
+            </p>
+            <input type="text" value="Click me!" uib-popover="I appeared on focus! Click away and I'll vanish..."  popover-trigger="'focus'" class="form-control">
+
+            <hr />
+            <h4>Other</h4>
+            <button popover-animation="true" uib-popover="I fade in and out!" type="button" class="btn btn-default">fading</button>
+            <button uib-popover="I have a title!" popover-title="The title." type="button" class="btn btn-default">title</button>
+            <button uib-popover="I am activated manually" popover-is-open="popoverIsOpen" ng-click="popoverIsOpen = !popoverIsOpen" type="button" class="btn btn-default">Toggle popover</button>
+            <button uib-popover-html="htmlPopover" class="btn btn-default">HTML Popover</button>
+            <button uib-popover-html="'<b>HTML</b>, <i>inline</i>'" class="btn btn-default">HTML Popover (inline)</button>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <h1 class="page-header">Popover</h1>
+
+            <div ng-controller="TimepickerDemoCtrl">
+
+              <div uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></div>
+
+              <pre class="alert alert-info">Time is: {{mytime | date:'shortTime' }}</pre>
+
+              <div class="row">
+                <div class="col-xs-6">
+                    Hours step is:
+                  <select class="form-control" ng-model="hstep" ng-options="opt for opt in options.hstep"></select>
+                </div>
+                <div class="col-xs-6">
+                    Minutes step is:
+                  <select class="form-control" ng-model="mstep" ng-options="opt for opt in options.mstep"></select>
+                </div>
+              </div>
+
+              <hr>
+
+              <button type="button" class="btn btn-info" ng-click="toggleMode()">12H / 24H</button>
+              <button type="button" class="btn btn-default" ng-click="update()">Set to 14:00</button>
+              <button type="button" class="btn btn-danger" ng-click="clear()">Clear</button>
+
+            </div>
+
+       </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <h1 class="page-header">Tooltip</h1>
+
+            <div ng-controller="TooltipDemoCtrl">
+                <div class="form-group">
+                  <label>Tooltip placement</label>
+                  <select class="form-control" ng-model="placement.selected" ng-options="o as o for o in placement.options"></select>
+                </div>
+                <button tooltip-placement="{{placement.selected}}" uib-tooltip="On the {{placement.selected}}" type="button" class="btn btn-default">Tooltip {{placement.selected}}</button>
+
+                <hr />
+                <div class="form-group">
+                  <label>Dynamic Tooltip Text</label>
+                  <input type="text" ng-model="dynamicTooltipText" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label>Dynamic Tooltip Popup Text</label>
+                  <input type="text" ng-model="dynamicTooltip" class="form-control">
+                </div>
+                <p>
+                  Pellentesque <a href="#" uib-tooltip="{{dynamicTooltip}}">{{dynamicTooltipText}}</a>,
+                  sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in
+                  aliquam. Tincidunt lobortis feugiat vivamus at
+                  <a href="#" tooltip-animation="false" uib-tooltip="I don't fade. :-(">fading</a>
+                  eget arcu dictum varius duis at consectetur lorem. Vitae elementum curabitur
+                  <a href="#" tooltip-popup-delay='1000' uib-tooltip='appears with delay'>show delay</a>
+                  nunc sed velit dignissim sodales ut eu sem integer vitae. Turpis egestas
+                  <a href="#" tooltip-popup-close-delay='1000' uib-tooltip='hides with delay'>hide delay</a>
+                  pharetra convallis posuere morbi leo urna,
+                  <a href="#" uib-tooltip-template="'myTooltipTemplate.html'">Custom template</a>
+                  at elementum eu, facilisis sed odio morbi quis commodo odio.
+                </p>
+
+                <p>
+                    I can even contain HTML as a
+                    <a href="#" uib-tooltip-html="htmlTooltip">scope variable</a> or
+                    <a href="#" uib-tooltip-html="'static. {{dynamicTooltipText}}. <b>bold.</b>'">inline string</a>
+                </p>
+
+                <p>
+                  <style>
+                    /* Specify styling for tooltip contents */
+                    .tooltip.customClass .tooltip-inner {
+                      color: #880000;
+                      background-color: #ffff66;
+                      box-shadow: 0 6px 12px rgba(0,0,0,.175);
+                    }
+                    /* Hide arrow */
+                    .tooltip.customClass .tooltip-arrow {
+                      display: none;
+                    }
+                  </style>
+                  I can have a custom class. <a href="#" uib-tooltip="I can have a custom class applied to me!" tooltip-class="customClass">Check me out!</a>
+                </p>
+
+
+                <div class="form-group">
+                  <label>Or use custom triggers, like focus: </label>
+                  <input type="text" value="Click me!" uib-tooltip="See? Now click away..." tooltip-trigger="'focus'" tooltip-placement="right" class="form-control" />
+                </div>
+
+                <div class="form-group" ng-class="{'has-error' : !inputModel}">
+                  <label>Disable tooltips conditionally:</label>
+                  <input type="text" ng-model="inputModel" class="form-control"
+                         placeholder="Hover over this for a tooltip until this is filled"
+                         uib-tooltip="Enter something in this input field to disable this tooltip"
+                         tooltip-placement="top"
+                         tooltip-trigger="'mouseenter'"
+                         tooltip-enable="!inputModel" />
+                </div>
+                <div class="form-group">
+                  <label>
+                    Open tooltips <span uib-tooltip="Hello!" tooltip-is-open="tooltipIsOpen" tooltip-placement="bottom">conditionally.</span>
+                  </label>
+                  <button ng-click="tooltipIsOpen = !tooltipIsOpen">Toggle tooltip</button>
+                </div>
+                <script type="text/ng-template" id="myTooltipTemplate.html">
+                  <span>Special Tooltip with <strong>markup</strong> and {{ dynamicTooltipText }}</span>
+                </script>
+            </div>
+
+       </div>
+      </div>
+    </section>
+
+
+
+
+
+
+<div class="margin-top margin-bottom"></div>
+
+
+
+
+
 
   </div>
 </div>
@@ -1421,16 +1774,21 @@
 <script src="bower_components/lodash/lodash.js"></script>
 <!-- endbower -->
 
-<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
 <script>
   angular.module('app',['dgp.navigation','ui.bootstrap']);
 </script>
 
+<script src="scripts/directives/ui-bootstrap-tpls-2.1.3.min.js"></script>
 <script src="scripts/directives/dgp-api-javascript.js"></script>
 <script src="scripts/directives/dgp-api-angular.js"></script>
 <script src="scripts/directives/sideNav.js"></script>
 <script src="scripts/directives/sideNavToggle.js"></script>
 <script src="scripts/directives/topNav.js"></script>
+<script src="scripts/directives/datepickerPopup.js"></script>
+<script src="scripts/directives/uibmodal.js"></script>
+<script src="scripts/directives/popover.js"></script>
+<script src="scripts/directives/timepicker.js"></script>
+<script src="scripts/directives/tooltip.js"></script>
 
 </body>
 </html>
