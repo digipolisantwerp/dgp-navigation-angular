@@ -1,10 +1,10 @@
 {
   "name": "dgp-navigation-angular",
   "description": "Dgp navigation Angular directive",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:lievenvg/dgp-navigation-angular.git"
+    "url": "git@github.com:digipolisantwerp/dgp-navigation-angular.git"
   },
   "dependencies": {
     "bower": "^1.3.12",
